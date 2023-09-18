@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <div class="hh" style="max-width: 500px;">
+        <div class="" style="text-align: center;">
+            <button id="button">Change Paragraph Content</button>
+        </div>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fugiat asperiores vitae sint facilis alias, voluptates deleniti aut debitis molestiae fugit. Eius, expedita. Ad a quo nam eligendi! Nostrum, itaque.</p>
+    </div>
+
+    <style>
+        body {
+            background-color: rgb(60, 59, 58);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        button{
+            border: 1px dashed  white;
+            background-color: transparent;
+            color: white;
+            padding:10px;
+            transition: 0.2s;
+        }
+        button:hover{
+            background-color: white;
+            color: rgb(60, 59, 58);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+    
+        document.getElementById("button"); // id name "button"
+        console.log(document.getElementById("button"));
+        // declare a variable 
+        const button = document.getElementById("button");
+        document.getElementById("para");
+        console.log(document.getElementById("para"));
+        // declare a variable 
+        const para = document.getElementById("para");
+
+        // when we click button , change paragraph content
+        button.addEventListener("click",function (params) {
+            para.innerHTML = 'You have clicked'});
+        // addEventListener is method , 
+        //click is a event
+        // innerHTML = to use change content
+
+
+    </script>
+
+</body>
+</html>
